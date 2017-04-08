@@ -12,5 +12,7 @@ def add():
     a = tf.constant([1.0,2.0],name="aa")
     b = tf.constant([2.0,3.0],name="bb")
     return a+b
+with tf.Session() as sess:
+    c = sess.run(add())
+    print c
 
-add()
